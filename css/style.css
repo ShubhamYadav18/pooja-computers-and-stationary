@@ -722,6 +722,43 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .top-bar-content {
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .top-bar {
+        font-size: 0.75rem;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        /* Allow wrapping if needed but control it */
+    }
+
+    .logo {
+        flex: 1;
+        /* Give logo space */
+        max-width: 85%;
+        /* Prevent overlapping with toggle */
+    }
+
+    .logo h1 {
+        font-size: 1.1rem;
+        /* Smaller size for mobile */
+        line-height: 1.2;
+    }
+
+    .logo p {
+        font-size: 0.7rem;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -733,6 +770,7 @@ footer {
         padding: 20px;
         box-shadow: var(--shadow-lg);
         gap: 15px;
+        text-align: center;
     }
 
     .nav-links.active {
@@ -741,9 +779,17 @@ footer {
 
     .mobile-toggle {
         display: block;
+        font-size: 1.8rem;
+        padding: 5px;
     }
 
     .hero h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .hero h1 {
+        /* If utilizing separate h1 class or style */
         font-size: 2rem;
     }
 
@@ -760,5 +806,14 @@ footer {
     footer {
         padding-bottom: 80px;
         /* Space for bottom nav */
+    }
+
+    .footer-col,
+    .footer-grid {
+        text-align: center;
+    }
+
+    .footer-col h4 {
+        margin-top: 20px;
     }
 }

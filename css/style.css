@@ -540,28 +540,75 @@ h3 {
 
 /* Xerox Rental Banner */
 .xerox-banner {
-    background: linear-gradient(135deg, var(--primary-color), #003c82);
+    background: #2c3e50;
+    /* Fallback */
+    background: linear-gradient(135deg, #2c3e50, #000000);
     color: var(--white);
-    padding: 40px;
-    border-radius: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 60px 0;
     margin: 40px 0;
+    border-radius: 0;
+    /* Full width feel or keep basic */
 }
 
-.banner-content h3 {
+.xerox-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.xerox-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.xerox-text h3 {
+    color: var(--accent-color);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.xerox-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.xerox-text ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.xerox-text li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.btn-shop-now {
+    background: var(--accent-color) !important;
+    color: #000 !important;
+    font-weight: 700;
+}
+
+.xerox-info-box {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    /* Subtle bg */
+}
+
+.xerox-info-box h4 {
+    color: var(--white);
     margin-bottom: 10px;
 }
 
-.banner-price {
-    background: var(--accent-color);
-    color: var(--text-dark);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    display: inline-block;
+.xerox-info-box p {
+    color: #ddd;
 }
 
 /* Image Placeholders (Fallback) */

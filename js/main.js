@@ -49,4 +49,26 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => enquiryForm.reset(), 1000);
         });
     }
+
+    // Review Form Handling
+    const reviewForm = document.getElementById('reviewForm');
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('reviewName').value;
+            const rating = document.getElementById('reviewRating').value;
+            const message = document.getElementById('reviewMessage').value;
+
+            // Create stars string
+            const stars = '⭐'.repeat(rating);
+
+            const whatsappMessage = `Hello, I want to submit a review.%0A%0AName: ${name}%0ARating: ${stars} (${rating}/5)%0AReview: ${message}`;
+            const whatsappUrl = `https://wa.me/919820490779?text=${whatsappMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+            // Optional: reset form after a short delay
+            setTimeout(() => reviewForm.reset(), 1000);
+        });
+    }
 });
